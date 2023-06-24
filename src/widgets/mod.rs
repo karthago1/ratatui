@@ -16,6 +16,7 @@
 //! - [`calendar::Monthly`]
 //! - [`Clear`]
 
+mod barchart2;
 mod barchart;
 mod block;
 #[cfg(feature = "widget-calendar")]
@@ -34,6 +35,7 @@ mod widget_list;
 
 use std::fmt::{self, Debug};
 
+pub use self::barchart2::BarChart2;
 pub use self::barchart::BarChart;
 pub use self::block::{Block, BorderType, Padding};
 pub use self::chart::{Axis, Chart, Dataset, GraphType};
