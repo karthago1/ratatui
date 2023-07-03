@@ -182,7 +182,7 @@ impl<'a> Widget for BarChart2<'a> {
         let bars_per_column = self.data[0].len();
 
         let max_index = min(
-            chart_area.width as usize
+            (chart_area.width + self.group_gap + self.bar_gap) as usize
                 / ((self.bar_width + self.bar_gap) * bars_per_column as u16 + self.group_gap)
                     as usize,
             self.data.len(),
